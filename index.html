@@ -9,7 +9,7 @@
     <title>Carusel vue</title>
 </head>
 <body>
-    
+
 <!-- id di connessione -->
 <div id="app">
 
@@ -41,7 +41,7 @@
         <!-- item -->
         <div class="item" v-for="(img, index) in images">
             <img :src="images[index].image" :alt="images[index].title" :class="activeImage === index ? 'selected' : ''">
-            <div :class="activeImage === index ? 'cover off' : 'cover'"></div>
+            <div :class="activeImage === index ? 'cover off' : 'cover'" @click="goToImage(index)"></div>
         </div>
 
     </div>
