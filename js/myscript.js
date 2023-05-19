@@ -3,6 +3,8 @@ const {createApp} = Vue;
 createApp({
     data() {
         return {
+            play: '',
+            rPlay: '',
             activeImage: 0,
             images: [
                 {
@@ -48,7 +50,25 @@ createApp({
         },
         goToImage(index) {
             this.activeImage = index;
+        },
+        autoPlay() {
+            this.stopPlay();
+            this.play = setInterval(() => {
+                this.nextImage();
+                }, 3000);      
+        },
+        revPlay() {
+            this.stopPlay();
+            this.rPlay = setInterval(() => {
+                this.prevImage();
+                }, 3000);
+        },
+        stopPlay() {
+            clearInterval(this.play);
+            clearInterval(this.rPlay);
         }
+        
+
 
     }
 

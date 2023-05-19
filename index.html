@@ -14,8 +14,9 @@
 <div id="app">
 
     <div class="container-play">
-        <i class="fa-sharp fa-regular fa-circle-play"></i>
-        <i class="fa-regular fa-circle-stop"></i>
+        <i class="fa-sharp fa-regular fa-circle-play prev" @click="revPlay"></i>
+        <i class="fa-sharp fa-regular fa-circle-play" @click="autoPlay"></i>
+        <i class="fa-regular fa-circle-stop" @click="stopPlay"></i>
     </div>
 
     <div class="container-schede">

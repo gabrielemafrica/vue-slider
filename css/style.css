@@ -32,6 +32,10 @@ body{
 .fa-regular{
     cursor: pointer;
 }
+
+.prev{
+    transform: rotate(180deg);
+}
 /* carusel e scheda */
 
 .container-schede{
@@ -144,4 +148,10 @@ body{
 
 .item:first-child .cover{
     border: 5px solid red;
+}
+
+/* colori bottoni active */
+
+i:active{
+    color: yellow;
 }
